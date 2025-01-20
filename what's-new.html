@@ -1,48 +1,87 @@
---- 
-layout: post 
+---
+layout: post
 title: What's New
 redirect_from: /What's-New/
 ---
 
+<div id="other-langs" style="display:none">
+	{% for post in site.posts %}
+		{% if post.url contains '/zh/' %}
+			<span data-title="{{ post.title }}" data-href="{{ post.url }}" ><a itemprop="name" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></span>
+		{% endif %}
+	{% endfor %}
+</div>
 
 <div id="list-contents">
-	<h3>Change Log</h3>
-	<ul class="category basic-posts">
-    {% assign result = site.categories.draftnew %}
-    {% assign result = result | concat: site.categories.new %}
-		{% for post in result %}
-		{% unless post.draft %}
-		{% assign title = post.title %}
-		<li>
-			<div class="article">
-				<article class="article" itemscope itemtype="http://schema.org/BlogPosting">
-					<header class="post-header">
-						<span class="title"><a itemprop="name" href="{{ post.url | prepend: site.github.url | prepend: site.baseurl}}" title="{{ title }}">{{ title }}</a></span>
-						<time class="date">{{ post.date | date: "%Y-%m-%d" }}</time>
-					</header>
-				</article>
-			</div>
-		</li>
-		{% endunless %}
-		{% endfor %}
-	</ul>
+  <h3>Change Log</h3>
+  <ul class="category basic-posts">
+    {% assign result = site.categories.draftnew %} {% assign result = result |
+    concat: site.categories.new %} {% for post in result %} {% unless post.draft
+    %} {% assign title = post.title %}
+    <li>
+      <div class="article">
+        <article
+          class="article"
+          itemscope
+          itemtype="http://schema.org/BlogPosting"
+        >
+          <header class="post-header">
+            <span class="title"
+              ><a
+                itemprop="name"
+                href="{{ post.url }}"
+                title="{{ title }}"
+                >{{ title }}</a
+              ></span
+            >
+            <time class="date">{{ post.date | date: "%Y-%m-%d" }}</time>
+          </header>
+        </article>
+      </div>
+    </li>
+    {% endunless %} {% endfor %}
+  </ul>
 
-	<h3>News / Announcements</h3>
-	<ul class="category basic-posts"> 
-		{% for post in site.categories.announcement %}
-		{% unless post.draft %}
-		{% assign title = post.title %}
-		<li>
-			<div class="article">
-				<article class="article" itemscope itemtype="http://schema.org/BlogPosting">
-					<header class="post-header">
-						<span class="title"><a itemprop="name" href="{{ post.url | prepend: site.github.url | prepend: site.baseurl}}" title="{{ title }}">{{ title }}</a></span>
-						<time class="date">{{ post.date | date: "%Y-%m-%d" }}</time>
-					</header>
-				</article>
-			</div>
-		</li>
-		{% endunless %}
-		{% endfor %}
-	</ul>
+  <h3>News / Announcements</h3>
+  <ul class="category basic-posts">
+    {% for post in site.categories.announcement %} {% unless post.draft %} {%
+    assign title = post.title %}
+    <li>
+      <div class="article">
+        <article
+          class="article"
+          itemscope
+          itemtype="http://schema.org/BlogPosting"
+        >
+          <header class="post-header">
+            <span class="title"
+              ><a
+                itemprop="name"
+                href="{{ post.url }}"
+                title="{{ title }}"
+                >{{ title }}</a
+              ></span
+            >
+            <time class="date">{{ post.date | date: "%Y-%m-%d" }}</time>
+          </header>
+        </article>
+      </div>
+    </li>
+    {% endunless %} {% endfor %}
+  </ul>
 </div>
+
+<script>
+	var langDom = document.querySelector("#other-langs");
+	if(location.host.indexOf(".cn") > -1) {
+		document.querySelectorAll(".title").forEach(t => {
+			var href = t.querySelector("a").getAttribute("href");
+			var cnSpan = href && langDom.querySelector(`[data-href="/zh${href}"]`);
+			if(cnSpan) {
+				t.innerHTML = cnSpan.innerHTML;
+			}
+		});
+	} else {
+		langDom.remove();
+	}
+</script>
