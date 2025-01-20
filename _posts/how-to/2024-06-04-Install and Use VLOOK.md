@@ -28,9 +28,9 @@ You can start a brand **new Markdown experience** in **just 3 steps**:
 
 **• Download the Plug-in:**
 
-Download the latest version from the homepage of VLOOK™:
+Download the latest version from the homepage of VLOOK™  (**VLOOK-released.zip**)
 
-**[GitHub](https://github.com/MadMaxChow/VLOOK/releases)** 　　**[Gitee](https://gitee.com/madmaxchow/VLOOK/releases)**
+**[GitHub](https://github.com/MadMaxChow/VLOOK/releases)** 　　**[Gitee](https://gitee.com/madmaxchow/VLOOK/tags)**
 
 **• Enable extended syntax:**
 
@@ -45,7 +45,7 @@ Enable all options under `Markdown Extended Syntax`, `Code Blocks` of Typora. Se
 **• Install the Themes:**
 
 1. The `released\themes` all CSS files are copied to Typora theme directory;
-2. Where is the theme directory? You can navigate to this directory by clicking `Settings ▸ Appearance ▸ Open Theme Directory`.
+2. Where is the theme directory? Open `Settings ▸ Appearance` , click `Open Theme Directory`.
 
 **• Select Theme:**
 
@@ -100,7 +100,7 @@ Currently supported languages for expansion include:
 
 **• Select language package**
 
-1. The language package file is located in the `released/plugin/lang` (Or directly visit the [**lang**](https://github.com/MadMaxChow/VLOOK/tree/master/released/plugin/lang) folder on GitHub)
+1. The language package file is located in the `released/plugin/lang`
 2. Open language file and copy all the content. (e.g: `Français.txt` )
 
 **• Update export configuration**

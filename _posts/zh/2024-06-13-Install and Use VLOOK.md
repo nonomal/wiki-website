@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 安装与使用 VLOOK
+title: 安装与使用 VLOOK™ 主题与插件
 author: typora.io
 permalink: /zh/Install-and-Use-VLOOK/
 typora-root-url: ../../
@@ -27,9 +27,9 @@ typora-copy-images-to: ../../media/vlook
 
 **• 下载插件**
 
-从 VLOOK™ 在托管的平台上下载最新发布版本：
+从 VLOOK™ 在托管的平台上下载最新发布版本（**VLOOK-released.zip**）
 
-**[GitHub](https://github.com/MadMaxChow/VLOOK/releases)**　　**[Gitee](https://gitee.com/madmaxchow/VLOOK/releases)**
+**[GitHub](https://github.com/MadMaxChow/VLOOK/releases)**　　**[Gitee](https://gitee.com/madmaxchow/VLOOK/tags)**
 
 **• 安装 Typora**
 
@@ -46,7 +46,7 @@ typora-copy-images-to: ../../media/vlook
 **• 安装主题**
 
 1. 将 `released/theme` 下所有 CSS 文件复制至 Typora 的主题目录；
-2. 主题目录在哪？可通过 `偏好设置 ▸ 外观 ▸ 打开主题目录` 定位到该目录。
+2. 主题目录在哪？可通过 `偏好设置 ▸ 外观` ，点击 `打开主题目录` 定位到该目录。
 
 **• 选用主题**
 
