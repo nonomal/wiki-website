@@ -202,6 +202,12 @@ Input *upgit* program location into *Command* textbox.
 
 Now enjoy it!
 
+### Other Tools
+
+There are some other tools you can use, please refer to [custom](#custom) section to set them as the image uploader.
+
+#### [pic_to_github](https://github.com/uuip/pic_to_github)
+
 ### Custom
 
 You could config a custom command to upload images, using tools that is not listed in above options, or even write your own tools / scripts. Typora will append all images that needs to be uploaded after the custom command you filled. 
